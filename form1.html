@@ -1,0 +1,56 @@
+<div class="container"  ng-show="form1">
+    <!--Reg Block-->
+    <div class="reg-block" style="margin-top: 10%">
+        <div class="reg-block-header" >
+            <!--<h2>Começar agora</h2>-->
+            <!--<p>Insira seu nome e e-mail para começar o seu pedido</p>-->
+            <img src="assets/img/logoIdeia10.png" alt="" style="display: block; margin: auto; padding-bottom: 2em">
+        </div>
+
+        <div class="input-group margin-bottom-20">
+            <span class="input-group-addon"><i class="fa fa-user icon-name"></i></span>
+            <input type="text" id="name" class="form-control" placeholder="Nome">
+        </div>
+        <div class="input-group margin-bottom-20">
+            <span class="input-group-addon"><i class="fa fa-envelope icon-email"></i></span>
+            <input type="text" class="form-control" id="email" placeholder="E-mail">
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <button ng-click="secondStep()" class="btn-u btn-block">Próximo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).ready(function(){
+
+            $("#name").focus(function(){
+                $(".icon-name").css("color", "#6DBD24");
+                $(".icon-name").parent().css("border-color", "#6DBD24");
+                $(this).css("border-color", "#6DBD24");
+            });
+
+            $("#name").blur(function(){
+                $(".icon-name").css("color", "#BBBBBB");
+                $(".icon-name").parent().css("border-color", "");
+                $(this).css("border-color", "");
+            });
+
+            $("#email").focus(function(){
+                $(".icon-email").css("color", "#6DBD24");
+                $(".icon-email").parent().css("border-color", "#6DBD24");
+                $(this).css("border-color", "#6DBD24");
+            });
+
+            $("#email").blur(function(){
+                $(".icon-email").css("color", "#BBBBBB");
+                $(".icon-email").parent().css("border-color", "");
+                $(this).css("border-color", "");
+            });
+        });
+    });
+</script>
